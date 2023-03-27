@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">   
+    <title>Temperature Convertor</title>
+  </head>
+  <body>
+
+    <div class="container-fluid" id="container">
+
+        <div class="row justify-content-center"  id="heading">
+            <div class="col-5">
+                <h2 class="text-center">Temperature Convertor</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-2 ">
+            <div class="col-5">
+
+                <label for="exampleFormControlInput1" class="form-label">Celsius (°C)</label>
+
+                <input type="number" class="form-control" id="celsius" placeholder="Temperature" value="0">
+
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-5">
+                <label for="exampleFormControlInput1" class="form-label">Fahrenheit (°F)</label>
+
+                <input type="number" class="form-control" id="kelvin" placeholder="Temperature" value="32">
+
+            </div>
+        </div>
+
+        <div class="row bg-dark justify-content-center">
+            <div class="col-12 text-center bg-dark p-2" id="footer-text">
+                <p>Created & Managed by -</p>  
+                <h3>Deepak Patel</h3>              
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        var cel = document.getElementById("celsius");
+        var kel = document.getElementById("kelvin");
+
+        cel.addEventListener("input",function(){
+            let c = this.value;
+            kel.value = (c * 9/5) + 32;
+
+        });
+
+        kel.addEventListener("input",function(){
+            let f=this.value;
+            cel.value= (f- 32) * 5/9;
+        });
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
